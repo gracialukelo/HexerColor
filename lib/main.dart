@@ -73,22 +73,22 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
+            const Text(
               "Klicken Sie unten auf die Schaltfläche, um den Hexadezimalcode der zufälligen Farbe anzuzeigen.",
               style: TextStyle(color: Colors.black),
               textAlign: TextAlign.center,
             ),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
+            const Padding(
+              padding: EdgeInsets.all(16.0),
               child: Text(
                 "Der Hexadezimalcode der Farbe lautet:",
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: Colors.amber),
                 textAlign: TextAlign.center,
               ),
             ),
             Text(
               backgroundColor.toString(),
-              style: TextStyle(color: Colors.black, fontSize: 20),
+              style: const TextStyle(color: Colors.black, fontSize: 20),
             ),
           ],
         ),
@@ -98,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
           changeColors();
         },
         tooltip: 'Ändern',
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }
